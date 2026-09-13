@@ -20,6 +20,7 @@ body {
 }
 
 /* Cabeçalho */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -28,19 +29,30 @@ body {
     height: 75px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: space-between; 
     border-bottom: 1px solid var(--text-color);
-    padding: 1.5rem 0; 
+    padding: 0 40px; 
     box-sizing: border-box; 
     background-color: var(--accent-color);
     backdrop-filter: blur(10px);
 }
 
+.logo {
+    color: #ffffff;
+    text-decoration: none;         
+    font-weight: 500;
+    font-size: 1.2rem; 
+}
+
+
+.menu-links {
+    display: flex;
+    gap: 25px;
+}
+
 .menu-links a {
     color: var(--text-color);
     text-decoration: none;
-    margin-left: 15px;
-    gap: 15px;
     font-weight: bold;
     padding: 0.5rem 0;
 }
