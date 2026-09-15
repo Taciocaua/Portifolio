@@ -10,7 +10,6 @@ html,body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: Comic Sans MS, cursive;
-    margin: 0;
 }
 /* Cabeçalho */
 
@@ -174,22 +173,103 @@ html,body {
 
 /* Contato */
 
-.titulo-contato {
-    font-size: 3rem;
-    text-align: center;
+/* --- Ajustes do Cabeçalho (Alinhamento Lado a Lado) --- */
+.cabecalho-contato {
+    display: flex;
+    flex-direction: row-reverse; /* Coloca o título na direita e a descrição na esquerda */
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1180px;
+    margin: 0 auto 60px;
+    padding: 0 10px;
+}
+
+.titulo-principal {
+    font-size: 90px;
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -2px;
+    text-align: right;
+    margin: 0;
+    max-width: 600px;
+}
+
+.titulo-principal .italico {
+    font-style: italic;
+    color: #e57538; /* Cor laranja do "em mente?" */
 }
 
 .descricao-contato {
-    text-align: center;
-    font-size: 1.2rem;
+    max-width: 325px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+    margin-top: 40px; /* Ajuste para alinhar verticalmente com o título */
 }
 
+/* --- Seus cards de contato permanecem limpos e responsivos --- */
 .caixa-contato {
-    display: flex;
-    flex-direction: line;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 500px;
+    width: 100%;
+    max-width: 1180px;
     margin: 0 auto;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.card-contato {
+    position: relative;
+    height: 170px;
+    padding: 25px 22px;
+    border: 1px solid #d6d2ca;
+    background-color: #f5f3ed;
+    text-decoration: none;
+    color: #050505;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.card-contato.email {
+    background-color: #e57538;
+    border-color: #e57538;
+    color: #ffffff; /* Texto branco no card laranja */
+}
+
+.card-titulo {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.card-contato h4 {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.seta {
+    position: absolute;
+    top: 25px;
+    right: 22px;
+    font-size: 21px;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+}
+
+.card-contato:hover .seta {
+    transform: translate(4px, -4px);
+}
+
+.card-contato:not(.email):hover {
+    background-color: #e9e6df;
+}
+
+.card-contato.email:hover {
+    background-color: #d9682d;
 }
