@@ -4,7 +4,7 @@ Portfólio pessoal desenvolvido para apresentar minha trajetória como estudante
 
 O projeto foi desenvolvido com foco em uma interface **moderna, simples e responsiva**, buscando apresentar minhas informações de forma objetiva e proporcionar uma boa experiência de navegação.
 
-## 🌐 Acesse o projeto
+## Acesse o projeto
 
 🔗 **[Visualizar Portfólio](https://portifolio-sigma-livid.vercel.app/)**
 
